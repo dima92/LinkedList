@@ -7,12 +7,65 @@ namespace LinkedList
     {
         private static void Main(string[] args)
         {
-            var list = new LinkedList<int>();
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
+            var circularList = new CircularLinkedList<int>
+            {
+                1,
+                2,
+                3,
+                4,
+                5
+            };
+
+            foreach (var item in circularList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            circularList.Delete(3);
+            foreach (var item in circularList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+            var duplexList = new DuplexLinkedList<int>
+            {
+                1,
+                2,
+                3,
+                4,
+                5
+            };
+
+            foreach (var item in duplexList)
+            {
+                Console.WriteLine(item);
+            }
+
+            duplexList.Delete(3);
+            foreach (var item in duplexList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            var reverse = duplexList.Reverse();
+            foreach (var item in reverse)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+
+            var list = new LinkedList<int>
+            {
+                1,
+                2,
+                3,
+                4,
+                5
+            };
 
             foreach (var item in list)
             {
